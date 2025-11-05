@@ -18,7 +18,4 @@ export interface PaginationResult<T> {
 export interface SearchResultsProps {
     items: Tool[];
     onToolClick: (tool: Tool) => void;
-    itemsPerPage?: number;
-    initialPage?: number;
-    className?: string;
 }
