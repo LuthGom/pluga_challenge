@@ -3,13 +3,8 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 import ToolModal from "./ToolModal";
 import Button from "./Button";
+import Tool from "./Tool";
 
-interface Tool {
-    name: string;
-    icon: string;
-    color: string;
-    link: string;
-}
 
 interface CardsListProps {
     // tools: Tool[];
@@ -32,7 +27,7 @@ export default function CardsList({ URL }: CardsListProps) {
             .then((response) => response.json())
             .then((data) => setItems(data))
             .catch((error) => console.error("Error fetching data:", error));
-    }, [])
+    }, [URL])
 
 
     const totalPages = Math.ceil(items.length / itemsPerPage);
@@ -47,7 +42,6 @@ export default function CardsList({ URL }: CardsListProps) {
         setLastClickedTools((prevTools) => {
             const updatedLastTools = [tool, ...prevTools];
 
-            setLastClickedTools([...updatedLastTools])
             if (lastClickedTools.length > 2) {
                 lastClickedTools.pop();
             }
@@ -67,9 +61,9 @@ export default function CardsList({ URL }: CardsListProps) {
     return (
         <div>
             <div className="w-4/5 mx-auto grid grid-cols-4 auto-rows-fr justify-items-center items-center h-[80vh] overflow-hidden">
-                {paginatedItems.map((tool, index) => (
+                {paginatedItems.map((tool) => (
                     <Card
-                        key={index}
+                        key={tool.app_id}
                         name={tool.name}
                         icon={tool.icon}
                         color={tool.color}
@@ -91,7 +85,7 @@ export default function CardsList({ URL }: CardsListProps) {
                     onClick={() => setPage((p) => Math.max(p - 1, 1))}
                     disabled={page === 1}
                     name="Anterior"
-                    style="bg-[#41BAFF]"
+                    className="bg-[#41BAFF]"
                 >
 
                 </Button>
@@ -104,7 +98,7 @@ export default function CardsList({ URL }: CardsListProps) {
                     onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
                     disabled={page === totalPages}
                     name="Próxima"
-                    style="bg-[#41BAFF]"
+                    className="bg-[#41BAFF]"
                 >
 
                 </Button>
