@@ -21,8 +21,6 @@ export default function SearchResults({
 
     const q = search.trim().toLowerCase();
     const filtered = q ? items.filter(t => t.name.toLowerCase().includes(q)) : items;
-
-    // Usa utilitário de paginação (separado)
     const totalPages = Math.max(1, Math.ceil(filtered.length / itemsPerPage));
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;

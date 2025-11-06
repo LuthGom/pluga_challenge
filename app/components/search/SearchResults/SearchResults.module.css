@@ -10,15 +10,15 @@
 .input {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #d1d5db; /* gray-300 */
-  border-radius: 0.375rem; /* rounded */
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem; 
   font-size: 1rem;
   outline: none;
   margin: 2rem;
 }
 
 .input:focus {
-  border-color: #3b82f6; /* blue-500 */
+  border-color: #3b82f6; 
   box-shadow: 0 0 0 3px rgba(59,130,246,0.08);
 }
 
@@ -31,7 +31,7 @@
 
 .emptyMessage {
   text-align: center;
-  color: #6b7280; /* gray-500 */
+  color: #6b7280; 
   padding: 1.5rem 0;
 }
 
@@ -41,5 +41,5 @@
   align-items: center;
   gap: 1rem;
   margin-top: 1.5rem;
-  color: #374151; /* gray-700 */
+  color: #374151; 
 }

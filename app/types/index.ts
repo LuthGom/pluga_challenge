@@ -7,12 +7,12 @@ export default interface Tool {
 }
 
 export interface PaginationResult<T> {
-  data: T[];           // itens da página atual
-  currentPage: number; // página ajustada (clamped)
+  data: T[];           
+  currentPage: number; 
   perPage: number;
   totalPages: number;
-  startIndex: number;  // índice inicial (inclusive)
-  endIndex: number;    // índice final (exclusive)
+  startIndex: number;  
+  endIndex: number;    
 }
 
 export interface SearchResultsProps {

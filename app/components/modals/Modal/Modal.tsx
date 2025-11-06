@@ -16,7 +16,6 @@ export default function Modal({ isOpen, onClose, children }: Props) {
             ref={overlayRef}
             className={styles.overlay}
             onMouseDown={(e) => {
-                // fecha ao clicar fora do conteúdo
                 if (e.target === overlayRef.current) onClose();
             }}
             aria-modal="true"

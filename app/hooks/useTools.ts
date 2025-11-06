@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 import Tool from '../types';
-import paginate from '../utils/paginate';
 
 
 interface UseToolsReturn {
