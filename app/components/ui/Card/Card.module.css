@@ -10,6 +10,7 @@
   justify-content: center;
   cursor: pointer;
   transition: border-color 0.2s;
+  background-color: #c9c6c6
 }
 
 .container:hover {
