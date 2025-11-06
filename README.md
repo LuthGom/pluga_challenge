@@ -41,7 +41,7 @@ Abra http://localhost:3000 no navegador (ou a porta informada no terminal).
 
 Boa leitura e bom desenvolvimento!
 
-Pode-se visualizar o resutaldo no link: <a href="plugachallenge.netlify.app/">deploy</a> 
+Pode-se visualizar o resutaldo no link: [Deploy](plugachallenge.netlify.app/)
 
 ### WireFrame1 - Tela com cards
 <img src="app\assets\wireframe1.png">
