@@ -22,16 +22,16 @@ export default function ToolModal({ isOpen, onClose, tool, onToolClick, lastedTo
         <Modal isOpen={isOpen} onClose={onClose}>
             <div className={styles.modalContent}>
                 <div className={styles.modalHeader}>
-
-                    <ReactSVG
+                    <img
                         src={tool.icon}
-                        beforeInjection={(svg) => {
-                            svg.setAttribute('fill', tool.color);
-                            svg.setAttribute('width', '64px');
-                            svg.setAttribute('height', '64px');
+                        alt={tool.name}
+                        style={{
+                            width: '64px',
+                            height: '64px',
+                            filter: `fill(${tool.color})`
                         }}
+                        className={styles.toolIcon}
                     />
-
                     <div className={styles.toolInfo}>
                         <h3 className={styles.toolTitle}>{tool.name}</h3>
 

@@ -12,6 +12,11 @@
   margin-bottom: 2rem;
 }
 
+.toolIcon{
+  background: #c9c6c6;
+  border-radius: 100%;
+  padding: 12px;
+}
 .toolInfo {
   display: flex;
   flex-direction: column;
